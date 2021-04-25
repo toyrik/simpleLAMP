@@ -13,7 +13,7 @@ services:
   mardiadb:
     image: mariadb:10.4
     ports:
-    - 3306:3366
+    - 3366:3306
     environment:
       MYSQL_ROOT_PASSWORD: rootroot
       MYSQL_DATABASE: testdb
