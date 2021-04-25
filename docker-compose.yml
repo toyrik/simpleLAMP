@@ -6,14 +6,14 @@ services:
     build:
       context: php
     ports:
-    - 127.0.0.1:8000:80
+    - 8000:80
     volumes:
     - ./app:/var/www/html
 
   mardiadb:
     image: mariadb:10.4
     ports:
-    - 127.0.0.1:3306:3306
+    - 3306:3366
     environment:
       MYSQL_ROOT_PASSWORD: rootroot
       MYSQL_DATABASE: testdb
@@ -25,7 +25,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
-    - 127.0.0.1:8080:80
+    - 8080:80
     environment:
       PMA_HOST: mardiadb
       PMA_USER: test_user
